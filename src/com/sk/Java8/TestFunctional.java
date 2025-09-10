@@ -41,7 +41,7 @@ public class TestFunctional {
 		 System.out.println("Name :- "+ name +" \nAge:- "+age +" \nSurname :- "+surname);
 	 };
 	 
-	 test5.functionalInterface1("Vivek", 25,"jaiswal");
+	 test5.functionalInterface1("Vivek", 24,"jaiswal");
 	
 	}
 	}
