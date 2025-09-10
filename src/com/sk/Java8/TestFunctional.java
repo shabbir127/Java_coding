@@ -1,7 +1,7 @@
 package com.sk.Java8;
 
 public class TestFunctional {
-	
+	//main function
 	public static void main(String[] args) {
 		
 		test1 test1= () ->{
@@ -15,6 +15,7 @@ public class TestFunctional {
 			System.out.println("Name :- " + name);
 			
 		};
+		//second example
 		test2.functionalInterface1("Shabbir");
 		
 
@@ -66,6 +67,11 @@ interface test3{
 
 
 interface test4{
+	
+	void functionalInterface1(String name, int number, String surname);
+}
+
+interface test5{
 	
 	void functionalInterface1(String name, int number, String surname);
 }
