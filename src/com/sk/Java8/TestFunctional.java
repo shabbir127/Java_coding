@@ -35,13 +35,20 @@ public class TestFunctional {
 	 
 	 test4.functionalInterface1("Altaf", 25,"Mulani");
 	
+	 
+       test5 test5 =(name,age,surname)->{
+		 
+		 System.out.println("Name :- "+ name +" \nAge:- "+age +" \nSurname :- "+surname);
+	 };
+	 
+	 test5.functionalInterface1("Vivek", 25,"jaiswal");
+	
 	}
-	
-	
+	}
+
+	 
 	
 
-	
-}
 
 
 @FunctionalInterface
