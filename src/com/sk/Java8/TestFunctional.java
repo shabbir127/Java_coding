@@ -65,12 +65,13 @@ interface test3{
 	void functionalInterface1(String name, int number);
 }
 
-
+@FunctionalInterface
 interface test4{
 	
 	void functionalInterface1(String name, int number, String surname);
 }
 
+@FunctionalInterface
 interface test5{
 	
 	void functionalInterface1(String name, int number, String surname);
