@@ -54,7 +54,6 @@ public class PracticeLinkedList1 {
     }
     
     //add new linked at last position
-    
     public void insertEnd(int data)
     {
     	ListNode newNode=new ListNode(data);
@@ -75,6 +74,11 @@ public class PracticeLinkedList1 {
           display();
     }
 	
+    //add new linked at any position
+    
+    
+    
+    
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
