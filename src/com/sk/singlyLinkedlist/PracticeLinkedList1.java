@@ -1,5 +1,7 @@
 package com.sk.singlyLinkedlist;
 
+import java.util.zip.CRC32;
+
 public class PracticeLinkedList1 {
 
 	private ListNode head;
@@ -47,7 +49,30 @@ public class PracticeLinkedList1 {
     	ListNode newNode =new ListNode(data);
     	newNode.next=head;
     	head=newNode;
+    	display();
     		
+    }
+    
+    //add new linked at last position
+    
+    public void insertEnd(int data)
+    {
+    	ListNode newNode=new ListNode(data);
+    	
+    	if (head == null) {
+			head=newNode;
+			return;
+		}
+    	
+    	ListNode current=head;
+    	while(current.next != null)
+    	{
+    		current=current.next;
+    	}
+          current.next=newNode;
+          //this is for the new line in the output section...
+          System.out.println();
+          display();
     }
 	
 	public static void main(String[] args) {
@@ -64,6 +89,7 @@ public class PracticeLinkedList1 {
 		pll.display();
 		pll.CountLength();
 		pll.insertfirst(9);
+		pll.insertEnd(50);
 	}
 	
 	
