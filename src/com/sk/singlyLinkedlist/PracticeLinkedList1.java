@@ -100,12 +100,10 @@ public class PracticeLinkedList1 {
 		 //this is for the new line in the output section..
 			System.out.println();
 			display();
-		}
-    	
-    	
+		}	
     }
     
-    
+    //delete first linked node
     
     
 	public static void main(String[] args) {
