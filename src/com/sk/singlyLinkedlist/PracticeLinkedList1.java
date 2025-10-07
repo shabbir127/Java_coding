@@ -63,6 +63,7 @@ public class PracticeLinkedList1 {
 		
 		pll.display();
 		pll.CountLength();
+		pll.insertfirst(9);
 	}
 	
 	
