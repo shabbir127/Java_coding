@@ -26,6 +26,18 @@ public class PracticeLinkedList1 {
     	}
     	System.out.print("null");
     }
+    public void CountLength()
+    {
+    	int count=0;
+    	ListNode current=head;
+    	while(current != null)
+    	{
+    		count ++;
+    		current =current.next;
+    	}
+    	System.out.println("\ncount is :- "+ count);
+    }
+
 	
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
@@ -39,7 +51,7 @@ public class PracticeLinkedList1 {
 		third.next=fourth;
 		
 		pll.display();
-		
+		pll.CountLength();
 	}
 	
 	
