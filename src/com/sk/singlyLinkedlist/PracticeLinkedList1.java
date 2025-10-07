@@ -26,6 +26,8 @@ public class PracticeLinkedList1 {
     	}
     	System.out.print("null");
     }
+    
+    // display the length of singly link list
     public void CountLength()
     {
     	int count=0;
