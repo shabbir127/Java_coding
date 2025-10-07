@@ -69,12 +69,41 @@ public class PracticeLinkedList1 {
     		current=current.next;
     	}
           current.next=newNode;
+          
           //this is for the new line in the output section...
           System.out.println();
           display();
     }
 	
     //add new linked at any position
+    public void insertAnyPosition(int data, int position)
+    {
+    	ListNode newNode=new ListNode(data);
+    	if(position ==1)
+    	{
+    		newNode.next=head;
+    		head=newNode;
+    	}else {
+			ListNode previous=head;
+			int count=1;
+			while(count < position-1)
+			{
+				previous =previous.next;
+				count ++;
+						
+			}
+			
+			ListNode current=previous.next;
+			newNode.next=current;
+			previous.next=newNode;
+			
+		 //this is for the new line in the output section..
+			System.out.println();
+			display();
+		}
+    	
+    	
+    }
     
     
     
@@ -84,7 +113,7 @@ public class PracticeLinkedList1 {
 		pll.head=new ListNode(10);
 		ListNode second=new ListNode(20);
 		ListNode third=new ListNode(30);
-		ListNode fourth=new ListNode(40);
+		ListNode fourth=new ListNode(60);
 		
 		pll.head.next=second;
 		second.next=third;
@@ -93,7 +122,9 @@ public class PracticeLinkedList1 {
 		pll.display();
 		pll.CountLength();
 		pll.insertfirst(9);
-		pll.insertEnd(50);
+		pll.insertEnd(70);
+		pll.insertAnyPosition(40, 5);
+		pll.insertAnyPosition(50, 6);
 	}
 	
 	
