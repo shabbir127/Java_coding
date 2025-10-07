@@ -41,6 +41,14 @@ public class PracticeLinkedList1 {
     	System.out.println("\ncount is :- "+ count);
     }
 
+    //add new linked list at first position
+    public void insertfirst(int data)
+    {
+    	ListNode newNode =new ListNode(data);
+    	newNode.next=head;
+    	head=newNode;
+    		
+    }
 	
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
