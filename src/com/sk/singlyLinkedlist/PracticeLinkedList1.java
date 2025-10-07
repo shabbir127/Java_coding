@@ -16,6 +16,7 @@ public class PracticeLinkedList1 {
 		}
 	}
 	
+	//display the linked list
     public void display()
     {
     	ListNode current=head;
