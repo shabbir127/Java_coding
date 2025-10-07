@@ -16,6 +16,17 @@ public class PracticeLinkedList1 {
 		}
 	}
 	
+    public void display()
+    {
+    	ListNode current=head;
+    	while(current != null)
+    	{
+    		System.out.print(current.data +" --> ");
+    		current =current.next;
+    	}
+    	System.out.print("null");
+    }
+	
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
@@ -26,6 +37,8 @@ public class PracticeLinkedList1 {
 		pll.head.next=second;
 		second.next=third;
 		third.next=fourth;
+		
+		pll.display();
 		
 	}
 	
