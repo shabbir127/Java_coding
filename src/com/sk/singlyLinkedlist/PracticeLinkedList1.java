@@ -139,10 +139,10 @@ public class PracticeLinkedList1 {
   //delete last linked node
     public ListNode deleteAnyposition(int position)
     {
-//    	if (position == 0 || position != null ) {
-//		System.out.println("Given inputs are null and zero..");
-//		return null;
-//		}
+    	if (position <= 0 ) {
+		System.out.println("Given inputs are null and zero..");
+		return null;
+		}
     	
     	if(position ==1)
     	{
