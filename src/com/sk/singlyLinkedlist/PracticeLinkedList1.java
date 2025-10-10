@@ -208,5 +208,12 @@ public class PracticeLinkedList1 {
 		System.out.println("last Node is :- " + pll.deleteLast().data);
 		pll.display(); 
 		System.out.println("\ndeleted any position node:- "+ pll.deleteAnyposition(1).data);
+	   if(pll.searchListNode(30))
+	   {
+		   System.out.println("The Given linked is found..");
+	   }else {
+		System.out.println("The Given Linked is not found...");
+	}
+	
 	}	
 }
