@@ -249,7 +249,7 @@ public class PracticeLinkedList1 {
 	}
 	
 	
-	//reverse linked list.... 
+	//reverse linked list....
 		
 		
 	
