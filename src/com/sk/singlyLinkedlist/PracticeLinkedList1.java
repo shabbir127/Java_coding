@@ -1,6 +1,4 @@
-package com.sk.singlyLinkedlist;
-
-
+package com.sk.singlyLinkedlist;import javax.security.auth.callback.LanguageCallback;
 
 public class PracticeLinkedList1 {
 
@@ -104,6 +102,73 @@ public class PracticeLinkedList1 {
     }
     
     //delete first linked node
+    public ListNode deleteFirst()
+    {
+    	if (head == null) {
+			return null;
+		}
+    	
+    	ListNode temp=head;
+    	head=head.next;
+    	temp.next=null;
+    	
+    	display();
+    	return temp;
+    }
+    
+    //delete last linked node
+    public ListNode deleteLast()
+    {
+    	if (head == null || head.next == null ) {
+			
+    		return head;
+		}
+    	
+    	ListNode current=head;
+    	ListNode previous=null;
+    	while(current.next != null)
+    	{
+    		previous=current;
+    		current=current.next;
+    	}
+    	
+    	previous.next=null;
+    	return current;
+    }
+    
+  //delete last linked node
+    public ListNode deleteAnyposition(int position)
+    {
+//    	if (position == 0 || position != null ) {
+//		System.out.println("Given inputs are null and zero..");
+//		return null;
+//		}
+    	
+    	if(position ==1)
+    	{
+    		ListNode temp=head;
+    		head=head.next;
+    		return temp;   		
+    	}else {
+			ListNode previous = head;
+			int count =1;
+			while(count < position -1)
+			{
+				previous =previous.next;
+				count ++;
+			}
+			ListNode current= previous.next;
+			previous.next=current.next;
+			
+			return current;	
+			
+		}
+      	
+    	
+    }
+    
+    
+    
     
     
 	public static void main(String[] args) {
@@ -123,6 +188,12 @@ public class PracticeLinkedList1 {
 		pll.insertEnd(70);
 		pll.insertAnyPosition(40, 5);
 		pll.insertAnyPosition(50, 6);
+		
+		System.out.println("\nFirst node is :- "
+				+ ""+pll.deleteFirst().data);
+		System.out.println("last Node is :- " + pll.deleteLast().data);
+		pll.display();
+		System.out.println("\ndeleted any position node:- "+ pll.deleteAnyposition(1).data);
 	}
 	
 	
