@@ -170,8 +170,8 @@ public class PracticeLinkedList1 {
     // search in linked list....
     public boolean searchListNode(int seachkey) 
     {
-    	ListNode current =head;
-    	if(current != null)
+    	ListNode current = head;
+    	while(current != null)
     	{
     		if(current.data == seachkey)
     		{
@@ -208,7 +208,11 @@ public class PracticeLinkedList1 {
 		System.out.println("last Node is :- " + pll.deleteLast().data);
 		pll.display(); 
 		System.out.println("\ndeleted any position node:- "+ pll.deleteAnyposition(1).data);
-	   if(pll.searchListNode(30))
+	  
+		
+		pll.display();
+		System.out.println();
+		if(pll.searchListNode(40))
 	   {
 		   System.out.println("The Given linked is found..");
 	   }else {
