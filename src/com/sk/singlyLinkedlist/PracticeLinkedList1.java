@@ -192,7 +192,7 @@ public class PracticeLinkedList1 {
 		System.out.println("\nFirst node is :- "
 				+ ""+pll.deleteFirst().data);
 		System.out.println("last Node is :- " + pll.deleteLast().data);
-		pll.display();
+		pll.display(); 
 		System.out.println("\ndeleted any position node:- "+ pll.deleteAnyposition(1).data);
 	}
 	
