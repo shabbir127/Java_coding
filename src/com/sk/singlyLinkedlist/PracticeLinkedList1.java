@@ -249,7 +249,7 @@ public class PracticeLinkedList1 {
 	}
 	
 	
-	//reverse linked list....
+	    //reverse linked list....
 		System.out.print("\n\n\nOrginal linked List:- ");
 		pll.display();
 		System.out.print("\nAfter the reversed Linked list:- ");
