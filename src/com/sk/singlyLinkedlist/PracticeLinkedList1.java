@@ -28,6 +28,17 @@ public class PracticeLinkedList1 {
     	System.out.print("null");
     }
     
+  //display with value the linked list
+    public void displaywithValue(ListNode head)
+    {
+    	ListNode current=head;
+    	while(current != null)
+    	{
+    		System.out.print(current.data +" --> ");
+    		current =current.next;
+    	}
+    	System.out.print("null");
+    }
     // display the length of singly link list
     public void CountLength()
     {
@@ -183,6 +194,24 @@ public class PracticeLinkedList1 {
     	return false;
     }
     
+    //reverse the Linked list
+    public ListNode reverseLinkedList()
+    {
+    	ListNode current=head;
+    	ListNode prevoius =null;
+    	ListNode next=null;
+    	
+    	while(current != null)
+    	{
+    		next=current.next;
+    		current.next=prevoius;
+    		prevoius =current;
+    		current=next;
+    	}
+    	
+    	return prevoius;
+    	
+    }
     
     
 	public static void main(String[] args) {
