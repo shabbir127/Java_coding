@@ -248,5 +248,12 @@ public class PracticeLinkedList1 {
 		System.out.println("The Given Linked is not found...");
 	}
 	
+	
+	//reverse linked list,....
+		
+		
+	
+	
+	
 	}	
 }
