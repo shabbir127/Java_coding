@@ -166,11 +166,7 @@ public class PracticeLinkedList1 {
       	
     	
     }
-    
-    
-    
-    
-    
+      
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
@@ -194,7 +190,5 @@ public class PracticeLinkedList1 {
 		System.out.println("last Node is :- " + pll.deleteLast().data);
 		pll.display(); 
 		System.out.println("\ndeleted any position node:- "+ pll.deleteAnyposition(1).data);
-	}
-	
-	
+	}	
 }
