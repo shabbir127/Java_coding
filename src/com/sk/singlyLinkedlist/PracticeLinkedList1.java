@@ -143,8 +143,7 @@ public class PracticeLinkedList1 {
 		System.out.println("Given inputs are null and zero..");
 		return null;
 		}
-    	
-    	
+    
     	if(position ==1)
     	{
     		ListNode temp=head;
