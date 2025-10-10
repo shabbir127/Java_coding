@@ -167,7 +167,7 @@ public class PracticeLinkedList1 {
     	
     } 
     
-    // search in linked list
+    // search in linked list....
     public boolean searchListNode(int seachkey) 
     {
     	ListNode current =head;
