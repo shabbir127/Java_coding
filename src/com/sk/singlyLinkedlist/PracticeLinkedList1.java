@@ -251,6 +251,9 @@ public class PracticeLinkedList1 {
 	
 	//reverse linked list....
 		
+		ListNode reversedLinkedList=pll.reverseLinkedList();
+		pll.displaywithValue(reversedLinkedList);
+		
 		
 	
 	
