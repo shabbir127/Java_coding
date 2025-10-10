@@ -240,7 +240,7 @@ public class PracticeLinkedList1 {
 	  
 		
 		pll.display();
-		System.out.println();
+		System.out.println("\n\n");
 		if(pll.searchListNode(40))
 	   {
 		   System.out.println("The Given linked is found..");
@@ -250,7 +250,9 @@ public class PracticeLinkedList1 {
 	
 	
 	//reverse linked list....
-		
+		System.out.print("\n\n\nOrginal linked List:- ");
+		pll.display();
+		System.out.print("\nAfter the reversed Linked list:- ");
 		ListNode reversedLinkedList=pll.reverseLinkedList();
 		pll.displaywithValue(reversedLinkedList);
 		
