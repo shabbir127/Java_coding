@@ -144,6 +144,7 @@ public class PracticeLinkedList1 {
 		return null;
 		}
     	
+    	
     	if(position ==1)
     	{
     		ListNode temp=head;
