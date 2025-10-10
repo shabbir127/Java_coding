@@ -165,7 +165,26 @@ public class PracticeLinkedList1 {
 		}
       	
     	
-    }      
+    } 
+    
+    // search in linked list
+    public boolean searchListNode(int seachkey) 
+    {
+    	ListNode current =head;
+    	if(current != null)
+    	{
+    		if(current.data == seachkey)
+    		{
+    			return true;
+    		}
+    		current=current.next;
+    	}
+    	
+    	return false;
+    }
+    
+    
+    
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
