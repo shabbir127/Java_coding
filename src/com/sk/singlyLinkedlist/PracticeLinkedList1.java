@@ -213,6 +213,20 @@ public class PracticeLinkedList1 {
     	
     }
     
+    //Find the middle linked list.....
+    public ListNode middlelinkedList(ListNode head)
+    {
+    	ListNode slowptr=head;
+    	ListNode fastptr=head;
+    	
+    	while(fastptr != null && fastptr.next != null)
+    	{
+    		slowptr =slowptr.next;
+    		fastptr=fastptr.next.next;
+    	}
+    	
+    	return slowptr;
+    }
     
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
