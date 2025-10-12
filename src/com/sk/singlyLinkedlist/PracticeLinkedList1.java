@@ -214,7 +214,7 @@ public class PracticeLinkedList1 {
     }
     
     //Find the middle linked list.....
-    public ListNode middlelinkedList(ListNode head)
+    public ListNode middlelinkedList()
     {
     	ListNode slowptr=head;
     	ListNode fastptr=head;
@@ -270,6 +270,8 @@ public class PracticeLinkedList1 {
 		ListNode reversedLinkedList=pll.reverseLinkedList();
 		pll.displaywithValue(reversedLinkedList);
 		
+		pll.middlelinkedList();
+		System.out.println("Finding the MIddle Node:- ");
 		
 	
 	
