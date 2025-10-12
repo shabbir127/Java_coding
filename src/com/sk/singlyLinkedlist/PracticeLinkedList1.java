@@ -239,6 +239,30 @@ public class PracticeLinkedList1 {
     }
     
     //find nth node from the end of singly list.
+    public ListNode secondlastfromList(int n) throws IllegalAccessException 
+    {
+    	ListNode mainPtr=head;
+    	ListNode refPtr=head;
+    	int count =0;
+    	
+    	
+		if (n <= 0) {
+			throw new IllegalAccessException("Invalid Value:= " + n);
+		}
+    	while(count < n)
+    	{
+    		refPtr =refPtr.next;
+    		count ++;
+    		
+    	}
+    	while(refPtr != null)
+    	{
+    		refPtr =refPtr.next;
+    		mainPtr=mainPtr.next;
+    	}
+    	
+    	return mainPtr;
+    }
     
     
     
