@@ -197,6 +197,7 @@ public class PracticeLinkedList1 {
     //reverse the Linked list
     public ListNode reverseLinkedList()
     {
+    	
     	ListNode current=head;
     	ListNode prevoius =null;
     	ListNode next=null;
@@ -216,6 +217,15 @@ public class PracticeLinkedList1 {
     //Find the middle linked list.....
     public ListNode middlelinkedList()
     {
+    	System.out.println();
+    	display();
+    	
+    	
+    	if (head == null) {
+			System.out.println("ListNode is empty");
+			return null;
+		}
+    	
     	ListNode slowptr=head;
     	ListNode fastptr=head;
     	
@@ -267,13 +277,14 @@ public class PracticeLinkedList1 {
 		System.out.print("\n\n\nOrginal linked List:- ");
 		pll.display();
 		System.out.print("\nAfter the reversed Linked list:- ");
-		ListNode reversedLinkedList=pll.reverseLinkedList();
-		pll.displaywithValue(reversedLinkedList);
+		//ListNode reversedLinkedList=pll.reverseLinkedList();
+		//pll.displaywithValue(reversedLinkedList);
 		
-		pll.middlelinkedList();
-		System.out.println("Finding the MIddle Node:- ");
 		
-	
+		ListNode middleNode=pll.middlelinkedList();
+		System.out.println("\nFinding the MIddle Node:- "+ middleNode.data);
+		
+	    
 	
 	
 	}	
