@@ -238,6 +238,10 @@ public class PracticeLinkedList1 {
     	return slowptr;
     }
     
+    //find nth node from the end of singly list.
+    
+    
+    
 	public static void main(String[] args) {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
