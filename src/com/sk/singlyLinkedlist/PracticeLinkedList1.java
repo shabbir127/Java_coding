@@ -266,7 +266,7 @@ public class PracticeLinkedList1 {
     
     
     
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IllegalAccessException {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
 		ListNode second=new ListNode(20);
@@ -312,7 +312,8 @@ public class PracticeLinkedList1 {
 		ListNode middleNode=pll.middlelinkedList();
 		System.out.println("\nFinding the MIddle Node:- "+ middleNode.data);
 		
-	    
+	    ListNode nthNode=pll.secondlastfromList(2);
+	    System.out.println("\nNth node from te end of list:- " + nthNode.data);
 	
 	
 	}	
