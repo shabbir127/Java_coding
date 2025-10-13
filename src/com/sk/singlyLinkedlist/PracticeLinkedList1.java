@@ -147,7 +147,7 @@ public class PracticeLinkedList1 {
     	return current;
     }
     
-  //delete last linked node
+  //delete any position linked node
     public ListNode deleteAnyposition(int position)
     {
     	if (position <= 0 ) {
