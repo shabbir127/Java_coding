@@ -147,7 +147,7 @@ public class PracticeLinkedList1 {
     	return current;
     }
     
-  //delete last linked node
+  //delete any position linked node
     public ListNode deleteAnyposition(int position)
     {
     	if (position <= 0 ) {
@@ -239,10 +239,32 @@ public class PracticeLinkedList1 {
     }
     
     //find nth node from the end of singly list.
-    
-    
-    
-	public static void main(String[] args) {
+    public ListNode secondlastfromList(int n) throws IllegalAccessException 
+    {
+    	ListNode mainPtr=head;
+    	ListNode refPtr=head;
+    	int count =0;
+    	
+    	
+		if (n <= 0) {
+			throw new IllegalAccessException("Invalid Value:= " + n);
+		}
+    	while(count < n)
+    	{
+    		refPtr =refPtr.next;
+    		count ++;
+    		
+    	}
+    	while(refPtr != null)
+    	{
+    		refPtr =refPtr.next;
+    		mainPtr=mainPtr.next;
+    	}
+    	
+    	return mainPtr;
+    }
+   
+	public static void main(String[] args) throws IllegalAccessException {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
 		ListNode second=new ListNode(20);
@@ -288,7 +310,8 @@ public class PracticeLinkedList1 {
 		ListNode middleNode=pll.middlelinkedList();
 		System.out.println("\nFinding the MIddle Node:- "+ middleNode.data);
 		
-	    
+	    ListNode nthNode=pll.secondlastfromList(2);
+	    System.out.println("\nNth node from te end of list:- " + nthNode.data);
 	
 	
 	}	
