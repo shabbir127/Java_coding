@@ -264,12 +264,29 @@ public class PracticeLinkedList1 {
     	return mainPtr;
     }
    
+    //how to remove the duplicate from sorted linked list...
+    public void removeduplicate()
+    {
+    	ListNode current=head;
+    	while(current != null && current.next.next != null)
+    	{
+    		if(current.data == current.next.data)
+    		{
+    			current.next =current.next.next;
+    		}else {
+				current = current.next;
+			}
+    	}
+    	display();
+    }
+    
 	public static void main(String[] args) throws IllegalAccessException {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
 		ListNode second=new ListNode(20);
-		ListNode third=new ListNode(30);
+		ListNode third=new ListNode(20);
 		ListNode fourth=new ListNode(60);
+		
 		
 		pll.head.next=second;
 		second.next=third;
