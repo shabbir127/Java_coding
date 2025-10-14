@@ -263,10 +263,7 @@ public class PracticeLinkedList1 {
     	
     	return mainPtr;
     }
-    
-    
-    
-    
+   
 	public static void main(String[] args) throws IllegalAccessException {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
