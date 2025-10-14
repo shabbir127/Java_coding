@@ -329,7 +329,9 @@ public class PracticeLinkedList1 {
 		
 	    ListNode nthNode=pll.secondlastfromList(2);
 	    System.out.println("\nNth node from te end of list:- " + nthNode.data);
-	
+	    pll.display();
+	    System.out.println("\nRemove duplicate from node:-");
+	    pll.removeduplicate();
 	
 	}	
 }
