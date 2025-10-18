@@ -31,14 +31,39 @@ public class ArrayPracticeSet1 {
 		Traversal(arr);
 	}
 	
+	public static void Deletion(int position,int arr[])
+	{
+		if (position < 0 || position >= arr.length) {
+	        System.out.println("Invalid position");
+	        return;
+	    }
+		
+		for(int i=position ;i < arr.length -1 ;i++)
+		{
+			arr[i]=arr[i + 1];
+		}
+		
+		//Once Array is created you cannot change his size so we have created new smaller array;
+		int afterremoval[]=new int[arr.length-1];
+		for(int i=0 ; i < arr.length-1;i++)
+		{
+		  afterremoval[i]=arr[i];	
+		}
+		
+		Traversal(afterremoval);
+	}
+	
 	
 	public static void main(String[] args) {
 		int n;
-		int arr[]= {10,20,30,40,50,60,70};
+		int arr[]= {10,20,30,40,50,60};
 		Traversal(arr);
-		System.out.print("Please Enter the Length:-");
-	     n=sc.nextInt();
-		Insert(n);
+//		System.out.print("Please Enter the Length:-");
+//	     n=sc.nextInt();
+//		Insert(n);
+		System.out.println("Please Enter the Delete position: -");
+		n=sc.nextInt();
+		Deletion(n, arr);
 		
 	}
 	
