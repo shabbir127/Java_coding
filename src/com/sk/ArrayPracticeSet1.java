@@ -53,17 +53,35 @@ public class ArrayPracticeSet1 {
 		Traversal(afterremoval);
 	}
 	
+	//Minium of array
+	public static void MinimumArray(int[] arr)
+	{
+		int min=arr[0];
+		for(int i=0;i<arr.length;i++)
+		{
+			if(arr[i] < min)
+				{
+				   min=arr[i];
+				}
+		}
+		System.out.println("Minimum of array: - "+ min);
+	}
+	
+	
 	
 	public static void main(String[] args) {
-		int n;
-		int arr[]= {10,20,30,40,50,60};
+		//int n;
+		int arr[]= {10,20,30,40,7,50,60};
 		Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
 //		Insert(n);
-		System.out.println("Please Enter the Delete position: -");
-		n=sc.nextInt();
-		Deletion(n, arr);
+//		System.out.println("Please Enter the Delete position: -");
+//		n=sc.nextInt();
+//		Deletion(n, arr);
+		
+		System.out.println("Finding Minum of array ");
+		MinimumArray(arr);
 		
 	}
 	
