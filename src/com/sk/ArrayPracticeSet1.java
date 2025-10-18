@@ -81,6 +81,33 @@ public class ArrayPracticeSet1 {
 			System.out.println("Maximum of array: - "+ max);
 		}
 	
+		//Array reverse ...
+		public static void reverseArray(int arr[])
+		{
+			for(int i=arr.length-1 ; i >= 0;i--)
+			{
+				System.out.print(arr[i]+ " ");
+			}
+			
+			System.out.println();
+			for(int i=0;i< arr.length;i++)
+			{
+				System.out.print(arr[arr.length - 1 -i] + " ");;
+			}
+			
+			System.out.println();
+			int start=0;
+			int end=arr.length-1;
+			while(start < end)
+			{
+				int temp= arr[start];
+				arr[start]=arr[end];
+				arr[end]=temp;
+				start ++;
+				end --;
+			}
+			Traversal(arr);
+		}
 	
 	
 	public static void main(String[] args) {
@@ -97,8 +124,10 @@ public class ArrayPracticeSet1 {
 //		System.out.println("Finding Minimum of array ");
 //		MinimumArray(arr);
 		
-		System.out.println("Finding Maximum of array ");
-		MaximumArray(arr);
+//		System.out.println("Finding Maximum of array ");
+//		MaximumArray(arr);
+		
+		reverseArray(arr);
 		
 	}
 	
