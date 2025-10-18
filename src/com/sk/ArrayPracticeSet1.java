@@ -53,7 +53,7 @@ public class ArrayPracticeSet1 {
 		Traversal(afterremoval);
 	}
 	
-	//Minium of array
+	//Minimum of array
 	public static void MinimumArray(int[] arr)
 	{
 		int min=arr[0];
@@ -67,11 +67,25 @@ public class ArrayPracticeSet1 {
 		System.out.println("Minimum of array: - "+ min);
 	}
 	
+	//Maximum of array
+		public static void MaximumArray(int[] arr)
+		{
+			int max=arr[0];
+			for(int i=0;i<arr.length;i++)
+			{
+				if(arr[i] > max)
+					{
+					   max=arr[i];
+					}
+			}
+			System.out.println("Maximum of array: - "+ max);
+		}
+	
 	
 	
 	public static void main(String[] args) {
 		//int n;
-		int arr[]= {10,20,30,40,7,50,60};
+		int arr[]= {10,20,30,40,90,50,60};
 		Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
@@ -80,8 +94,11 @@ public class ArrayPracticeSet1 {
 //		n=sc.nextInt();
 //		Deletion(n, arr);
 		
-		System.out.println("Finding Minum of array ");
-		MinimumArray(arr);
+//		System.out.println("Finding Minimum of array ");
+//		MinimumArray(arr);
+		
+		System.out.println("Finding Maximum of array ");
+		MaximumArray(arr);
 		
 	}
 	
