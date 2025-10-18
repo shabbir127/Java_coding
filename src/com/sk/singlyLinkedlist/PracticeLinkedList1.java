@@ -280,6 +280,24 @@ public class PracticeLinkedList1 {
     	display();
     }
     
+    //insert in sorted linked list 
+    public void insertInsortedList(int value)
+    {
+    	ListNode newNode=new ListNode(value);
+           ListNode current=head;
+           ListNode temp=null;
+           while(current != null && current.data < newNode.data)
+           {
+        	   temp=current;
+        	   current=current.next;
+           }
+           newNode.next=current;
+           temp.next=newNode;
+            display();          
+    }
+    
+    
+    
 	public static void main(String[] args) throws IllegalAccessException {
 		PracticeLinkedList1 pll=new PracticeLinkedList1();
 		pll.head=new ListNode(10);
@@ -333,5 +351,7 @@ public class PracticeLinkedList1 {
 	    System.out.println("\nRemove duplicate from node:-");
 	    pll.removeduplicate();
 	
+	    pll.insertInsortedList(21);
+	    
 	}	
 }
