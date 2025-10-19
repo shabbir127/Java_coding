@@ -2,6 +2,8 @@ package com.sk;
 
 import java.util.Scanner;
 
+
+
 public class ArrayPracticeSet1 {
 	
 	 static Scanner sc=new Scanner(System.in);
@@ -81,12 +83,110 @@ public class ArrayPracticeSet1 {
 			System.out.println("Maximum of array: - "+ max);
 		}
 	
+		//Array reverse ...
+		public static void reverseArray(int arr[])
+		{
+			for(int i=arr.length-1 ; i >= 0;i--)
+			{
+				System.out.print(arr[i]+ " ");
+			}
+			
+			System.out.println();
+			for(int i=0;i< arr.length;i++)
+			{
+				System.out.print(arr[arr.length - 1 -i] + " ");;
+			}
+			
+			System.out.println();
+			int start=0;
+			int end=arr.length-1;
+			while(start < end)
+			{
+				int temp= arr[start];
+				arr[start]=arr[end];
+				arr[end]=temp;
+				start ++;
+				end --;
+			}
+			Traversal(arr);
+		}
+		
+		
+		
+		//Sum and Average ....
+		public static void SumNAverage(int[] arr)
+		{
+			int sum=0;
+			int sum1=0;
+			for(int num:arr)
+			{
+				sum=sum+num;
+			}
+			int i=0;
+			while(arr.length > i)
+			{
+				sum1 += arr[i];
+				i++;
+			}
+			
+			
+			double avg =sum/arr.length;
+			double avg1 =sum1/arr.length;
+			
+			System.out.println("Sum of array is:- " + sum + ", Average of given Array is :- " + avg );
+			System.out.println("Sum of array is:- " + sum1 + ", Average of given Array is :- " + avg1 );
+		}
+		
+		//Binary Search
+		public static boolean BinarySearch(int[] arr)
+		{
+			int start =0;
+			int target=70;
+			int end=arr.length-1;
+			boolean found=false;
+			while(start <= end)
+			{
+				int mid =(start+end)/2;
+				if (target == arr[mid]) {
+					System.out.println("Array found:- " + arr[mid] + ", poistion is :- " + mid);
+					found =true;
+					return found;
+				}else if (target > arr[mid]) {
+				start = mid +1;
+				}else {
+					end = mid -1;
+				}
+			
+			}
+			if (!found) {
+				System.out.println("Array Not found:");
+			}
+			
+			return false;
+			
+		}
+		
+		//Linear search
+		public static void LinearSearch(int arr[])
+		{
+			int target=7330;
+			for(int i=0; i < arr.length; i++)
+			{
+				if(target == arr[i])
+				{
+					System.out.println("Linear Search success: - " + arr[i]);
+				    return ;
+				}
+			}
+			System.out.println("Linear Search Failed : -" );
+		}
+		
 	
 	
 	public static void main(String[] args) {
 		//int n;
 		int arr[]= {10,20,30,40,90,50,60};
-		Traversal(arr);
+		//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
 //		Insert(n);
@@ -97,8 +197,15 @@ public class ArrayPracticeSet1 {
 //		System.out.println("Finding Minimum of array ");
 //		MinimumArray(arr);
 		
-		System.out.println("Finding Maximum of array ");
-		MaximumArray(arr);
+//		System.out.println("Finding Maximum of array ");
+//		MaximumArray(arr);
+		
+//		reverseArray(arr);
+		
+		//SumNAverage(arr);
+		//BinarySearch(arr);
+		 LinearSearch(arr);
+		
 		
 	}
 	
