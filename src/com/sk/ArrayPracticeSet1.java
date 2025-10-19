@@ -135,7 +135,34 @@ public class ArrayPracticeSet1 {
 			System.out.println("Sum of array is:- " + sum1 + ", Average of given Array is :- " + avg1 );
 		}
 		
-		
+		//Binary Search
+		public static boolean BinarySearch(int[] arr)
+		{
+			int start =0;
+			int target=70;
+			int end=arr.length-1;
+			boolean found=false;
+			while(start <= end)
+			{
+				int mid =(start+end)/2;
+				if (target == arr[mid]) {
+					System.out.println("Array found:- " + arr[mid] + ", poistion is :- " + mid);
+					found =true;
+					return found;
+				}else if (target > arr[mid]) {
+				start = mid +1;
+				}else {
+					end = mid -1;
+				}
+			
+			}
+			if (!found) {
+				System.out.println("Array Not found:");
+			}
+			
+			return false;
+			
+		}
 		
 		
 		
@@ -161,7 +188,7 @@ public class ArrayPracticeSet1 {
 //		reverseArray(arr);
 		
 		SumNAverage(arr);
-		//BinarySearch(arr);
+		BinarySearch(arr);
 		
 	}
 	
