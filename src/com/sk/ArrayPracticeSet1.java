@@ -108,6 +108,37 @@ public class ArrayPracticeSet1 {
 			}
 			Traversal(arr);
 		}
+		
+		
+		
+		//Sum and Average ....
+		public static void SumNAverage(int[] arr)
+		{
+			int sum=0;
+			int sum1=0;
+			for(int num:arr)
+			{
+				sum=sum+num;
+			}
+			int i=0;
+			while(arr.length > i)
+			{
+				sum1 += arr[i];
+				i++;
+			}
+			
+			
+			double avg =sum/arr.length;
+			double avg1 =sum1/arr.length;
+			
+			System.out.println("Sum of array is:- " + sum + ", Average of given Array is :- " + avg );
+			System.out.println("Sum of array is:- " + sum1 + ", Average of given Array is :- " + avg1 );
+		}
+		
+		
+		
+		
+		
 	
 	
 	public static void main(String[] args) {
@@ -127,7 +158,10 @@ public class ArrayPracticeSet1 {
 //		System.out.println("Finding Maximum of array ");
 //		MaximumArray(arr);
 		
-		reverseArray(arr);
+//		reverseArray(arr);
+		
+		SumNAverage(arr);
+		//BinarySearch(arr);
 		
 	}
 	
