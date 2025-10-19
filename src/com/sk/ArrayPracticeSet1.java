@@ -2,6 +2,8 @@ package com.sk;
 
 import java.util.Scanner;
 
+
+
 public class ArrayPracticeSet1 {
 	
 	 static Scanner sc=new Scanner(System.in);
@@ -164,14 +166,27 @@ public class ArrayPracticeSet1 {
 			
 		}
 		
-		
+		//Linear search
+		public static void LinearSearch(int arr[])
+		{
+			int target=7330;
+			for(int i=0; i < arr.length; i++)
+			{
+				if(target == arr[i])
+				{
+					System.out.println("Linear Search success: - " + arr[i]);
+				    return ;
+				}
+			}
+			System.out.println("Linear Search Failed : -" );
+		}
 		
 	
 	
 	public static void main(String[] args) {
 		//int n;
 		int arr[]= {10,20,30,40,90,50,60};
-		Traversal(arr);
+		//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
 //		Insert(n);
@@ -187,8 +202,10 @@ public class ArrayPracticeSet1 {
 		
 //		reverseArray(arr);
 		
-		SumNAverage(arr);
-		BinarySearch(arr);
+		//SumNAverage(arr);
+		//BinarySearch(arr);
+		 LinearSearch(arr);
+		
 		
 	}
 	
