@@ -181,11 +181,43 @@ public class ArrayPracticeSet1 {
 			System.out.println("Linear Search Failed : -" );
 		}
 		
+		//Frequency of array
+		public static void Frequency(int[] arr)
+		{
+			int count=0;
+			int frequncy=40;
+			for(int i=0;i<arr.length;i++)
+			{
+				if (frequncy==arr[i]) {
+					count ++;
+				}
+			}
+			System.out.println("Total Number of frequnecy is:- "+ count);
+		}
+		
+		//checking the array is sorted or not
+		public static void ArrayChecking(int[] arr)
+		{
+			boolean flag=true;
+			for(int i=0;i < arr.length -1 ;i++)
+			{
+				if(arr[i] > arr[i +1])
+				{
+					System.out.println("Array is not sorted...");
+					flag=false;
+					break;
+				}
+			}
+			if (flag) {
+				System.out.println("Array is sorted...");	
+			}
+			
+		}
 	
 	
 	public static void main(String[] args) {
 		//int n;
-		int arr[]= {10,20,30,40,90,50,60};
+		int arr[]= {10,20,30,40,90,40,50,60};
 		//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
@@ -204,7 +236,9 @@ public class ArrayPracticeSet1 {
 		
 		//SumNAverage(arr);
 		//BinarySearch(arr);
-		 LinearSearch(arr);
+		//LinearSearch(arr);
+		Frequency(arr);
+		ArrayChecking(arr);
 		
 		
 	}
