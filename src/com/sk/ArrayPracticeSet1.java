@@ -1,5 +1,7 @@
 package com.sk;
 
+
+import java.util.Iterator;
 import java.util.Scanner;
 
 
@@ -201,7 +203,7 @@ public class ArrayPracticeSet1 {
 			boolean flag=true;
 			for(int i=0;i < arr.length -1 ;i++)
 			{
-				if(arr[i] > arr[i +1])
+				if(arr[i] < arr[i + 1])
 				{
 					System.out.println("Array is not sorted...");
 					flag=false;
@@ -214,10 +216,37 @@ public class ArrayPracticeSet1 {
 			
 		}
 	
+		
+		//count the frequency of each element
+		public static void EachFrequency(int[] arr)
+		{
+			boolean[] frequency=new boolean[arr.length];
+			int count=0;
+			for(int i=0;i < arr.length ;i++)
+			{
+				if (frequency[i]) {
+					continue;
+				}
+				count=1;
+				for(int j=i+1;j< arr.length ;j++)
+				{
+					if (arr[i]==arr[j])
+					{
+						frequency[j]=true;
+						count++;
+						
+					}
+					//System.out.println("frequency: -"+frequency[j]);
+				}
+				System.out.println("Elemeny: - " +arr[i] + " Total Frequency: - " +count);
+			}	
+		}
 	
 	public static void main(String[] args) {
 		//int n;
-		int arr[]= {10,20,30,40,90,40,50,60};
+		//int arr[]= {10,9,20,30,40,50,60};
+		int arr[] = {60,60,50,40,50,40,20,20,10,30,40,20,10};
+		
 		//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
@@ -237,9 +266,9 @@ public class ArrayPracticeSet1 {
 		//SumNAverage(arr);
 		//BinarySearch(arr);
 		//LinearSearch(arr);
-		Frequency(arr);
-		ArrayChecking(arr);
-		
+		//Frequency(arr);
+	//	ArrayChecking(arr);
+		EachFrequency(arr);
 		
 	}
 	
