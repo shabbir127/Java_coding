@@ -241,13 +241,71 @@ public class ArrayPracticeSet1 {
 				System.out.println("Elemeny: - " +arr[i] + " Total Frequency: - " +count);
 			}	
 		}
+		
+		//second max value;
+		public static void SecondMaxElement(int[] arr)
+		{
+			int max=Integer.MIN_VALUE;
+			int secondMax=Integer.MIN_VALUE;
+			
+			for(int i=0; i < arr.length ;i++)
+			{
+				if(arr[i] > max)
+				{
+					secondMax=max;
+					max=arr[i];
+				}
+				if (arr[i] > secondMax && max != arr[i]) {
+					secondMax=arr[i];
+				}
+			}
+			System.out.println("Second Max value is:- "+secondMax);
+			
+		}
 	
+		//remove duplicate
+		public static int removeDuplicates(int[] arr) {
+		    int i = 0;
+		    for (int j = 1; j < arr.length; j++) {
+		        if (arr[i] != arr[j]) {
+		            i++;
+		            arr[i] = arr[j];
+		        }
+		    }
+		    return i + 1; // new length
+		}
+		
+		//We need to find if there exists a pair (two numbers) in the array whose sum equals the target.
+	    public static void pairElement(int[] arr)
+	    {
+	    	int start=0;
+	    	int end =arr.length-1;
+	    	int target=11;
+	    	boolean flag=false;
+	    	while(start < end)
+	    	{
+	    		int sum=arr[start]+arr[end];
+	    		if (target == sum) 
+	    		{
+					System.out.println("we got the sum in the given array:- "+ sum +" target was "+ target);
+					flag=true;
+					break;
+				}else if (target > sum) {
+					start ++;
+				}else {
+					end--;
+				}	
+	    	}
+	    	if (!flag) {
+	    		System.out.println("we have not got the sum in the given array :");
+			}
+	    }
 	public static void main(String[] args) {
 		//int n;
 		//int arr[]= {10,9,20,30,40,50,60};
-		int arr[] = {60,60,50,40,50,40,20,20,10,30,40,20,10};
+		int arr[] = {1,2,3,4,5,6,7,8,9};
 		
-		//Traversal(arr);
+	//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
 //		Insert(n);
@@ -268,7 +326,9 @@ public class ArrayPracticeSet1 {
 		//LinearSearch(arr);
 		//Frequency(arr);
 	//	ArrayChecking(arr);
-		EachFrequency(arr);
+		//EachFrequency(arr);
+		//SecondMaxElement(arr);
+		pairElement(arr);
 		
 	}
 	
