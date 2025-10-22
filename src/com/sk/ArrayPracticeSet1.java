@@ -1,5 +1,7 @@
 package com.sk;
 
+
+import java.util.Iterator;
 import java.util.Scanner;
 
 
@@ -181,12 +183,129 @@ public class ArrayPracticeSet1 {
 			System.out.println("Linear Search Failed : -" );
 		}
 		
+		//Frequency of array
+		public static void Frequency(int[] arr)
+		{
+			int count=0;
+			int frequncy=40;
+			for(int i=0;i<arr.length;i++)
+			{
+				if (frequncy==arr[i]) {
+					count ++;
+				}
+			}
+			System.out.println("Total Number of frequnecy is:- "+ count);
+		}
+		
+		//checking the array is sorted or not
+		public static void ArrayChecking(int[] arr)
+		{
+			boolean flag=true;
+			for(int i=0;i < arr.length -1 ;i++)
+			{
+				if(arr[i] < arr[i + 1])
+				{
+					System.out.println("Array is not sorted...");
+					flag=false;
+					break;
+				}
+			}
+			if (flag) {
+				System.out.println("Array is sorted...");	
+			}
+			
+		}
 	
+		
+		//count the frequency of each element
+		public static void EachFrequency(int[] arr)
+		{
+			boolean[] frequency=new boolean[arr.length];
+			int count=0;
+			for(int i=0;i < arr.length ;i++)
+			{
+				if (frequency[i]) {
+					continue;
+				}
+				count=1;
+				for(int j=i+1;j< arr.length ;j++)
+				{
+					if (arr[i]==arr[j])
+					{
+						frequency[j]=true;
+						count++;
+						
+					}
+					//System.out.println("frequency: -"+frequency[j]);
+				}
+				System.out.println("Elemeny: - " +arr[i] + " Total Frequency: - " +count);
+			}	
+		}
+		
+		//second max value;
+		public static void SecondMaxElement(int[] arr)
+		{
+			int max=Integer.MIN_VALUE;
+			int secondMax=Integer.MIN_VALUE;
+			
+			for(int i=0; i < arr.length ;i++)
+			{
+				if(arr[i] > max)
+				{
+					secondMax=max;
+					max=arr[i];
+				}
+				if (arr[i] > secondMax && max != arr[i]) {
+					secondMax=arr[i];
+				}
+			}
+			System.out.println("Second Max value is:- "+secondMax);
+			
+		}
 	
+		//remove duplicate
+		public static int removeDuplicates(int[] arr) {
+		    int i = 0;
+		    for (int j = 1; j < arr.length; j++) {
+		        if (arr[i] != arr[j]) {
+		            i++;
+		            arr[i] = arr[j];
+		        }
+		    }
+		    return i + 1; // new length
+		}
+		
+		//We need to find if there exists a pair (two numbers) in the array whose sum equals the target.
+	    public static void pairElement(int[] arr)
+	    {
+	    	int start=0;
+	    	int end =arr.length-1;
+	    	int target=11;
+	    	boolean flag=false;
+	    	while(start < end)
+	    	{
+	    		int sum=arr[start]+arr[end];
+	    		if (target == sum) 
+	    		{
+					System.out.println("we got the sum in the given array:- "+ sum +" target was "+ target);
+					flag=true;
+					break;
+				}else if (target > sum) {
+					start ++;
+				}else {
+					end--;
+				}	
+	    	}
+	    	if (!flag) {
+	    		System.out.println("we have not got the sum in the given array :");
+			}
+	    }
 	public static void main(String[] args) {
 		//int n;
-		int arr[]= {10,20,30,40,90,50,60};
-		//Traversal(arr);
+		//int arr[]= {10,9,20,30,40,50,60};
+		int arr[] = {1,2,3,4,5,6,7,8,9};
+		
+	//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
 //		Insert(n);
@@ -204,8 +323,12 @@ public class ArrayPracticeSet1 {
 		
 		//SumNAverage(arr);
 		//BinarySearch(arr);
-		 LinearSearch(arr);
-		
+		//LinearSearch(arr);
+		//Frequency(arr);
+	//	ArrayChecking(arr);
+		//EachFrequency(arr);
+		//SecondMaxElement(arr);
+		pairElement(arr);
 		
 	}
 	
