@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 
-
+//traversing the array
 public class ArrayPracticeSet1 {
 	
 	 static Scanner sc=new Scanner(System.in);
@@ -18,6 +18,7 @@ public class ArrayPracticeSet1 {
 		
 	}
 	
+	//Insert in array
 	public static void Insert(int n)
 	{
 		if (n <= 0) {
