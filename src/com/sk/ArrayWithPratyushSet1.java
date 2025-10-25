@@ -34,7 +34,7 @@ public class ArrayWithPratyushSet1 {
 		System.out.println("Total unqiue placed aquire "+ placed);
 	}
 	
-	//pair found in sorted array....
+	//pair found in sorted array....(easy)
 	public static void PairSum(int[] arr)
 	{
         int target=21;
