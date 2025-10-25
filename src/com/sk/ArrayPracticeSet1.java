@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 
-
+//traversing the array
 public class ArrayPracticeSet1 {
 	
 	 static Scanner sc=new Scanner(System.in);
@@ -18,6 +18,7 @@ public class ArrayPracticeSet1 {
 		
 	}
 	
+	//Insert in array
 	public static void Insert(int n)
 	{
 		if (n <= 0) {
@@ -300,11 +301,39 @@ public class ArrayPracticeSet1 {
 	    		System.out.println("we have not got the sum in the given array :");
 			}
 	    }
+	    
+	    //bubble sort algothrim 
+	    public static void BubbleSort(int[] arr)
+	    {
+	    	for(int i = 0 ; i< arr.length ; i++)
+	    	{
+	    		int flag=0;
+	    		for(int j =0; j< arr.length-1-i;j++)
+	    		{
+	    			if (arr[j] > arr[j+1]) {
+						int temp=arr[j];
+						arr[j]=arr[j+1];
+						arr[j+1]=temp;
+						flag=1;
+					}
+	    		}
+	    		if (flag ==0) {
+					break;
+				}
+	    	}
+	    	
+	    	for(int i=0;i<arr.length ;i++)
+	    	{
+	    		System.out.print(arr[i]+" ");
+	    	}
+	    }
+	    
+	    
 	public static void main(String[] args) {
 		//int n;
 		//int arr[]= {10,9,20,30,40,50,60};
 		int arr[] = {1,2,3,4,5,6,7,8,9};
-		
+		int arr1[] = {9,4,3,7,6,9,8,11};
 	//Traversal(arr);
 //		System.out.print("Please Enter the Length:-");
 //	     n=sc.nextInt();
@@ -328,7 +357,9 @@ public class ArrayPracticeSet1 {
 	//	ArrayChecking(arr);
 		//EachFrequency(arr);
 		//SecondMaxElement(arr);
-		pairElement(arr);
+		//pairElement(arr);
+		
+		BubbleSort(arr1);
 		
 	}
 	
