@@ -34,9 +34,39 @@ public class ArrayWithPratyushSet1 {
 		System.out.println("Total unqiue placed aquire "+ placed);
 	}
 	
+	//pair found in sorted array....(easy)
+	public static void PairSum(int[] arr)
+	{
+        int target=21;
+        int start=0;
+        int end=arr.length-1;
+        boolean flag=false;
+        while(start < end)
+        {
+        	int sum=arr[start]+arr[end];
+        	if(target ==sum)
+        	{
+        		System.out.println("Pair found "+ sum);
+        		flag=true;
+        		break;
+        	}else if(target > sum)
+        	{
+        		start ++;
+        	}
+        	else {
+				end --;
+			}
+        }
+        if (!flag) {
+			System.out.println("Pair not found: ");
+		}
+        
+	}
+	
 	public static void main(String[] args) {
-		int[] arr= {1,1,1,2,2,2,3,3,3,3,4,4,5,6,6};
+		int[] arr= {1,1,1,2,2,2,3,3,3,3,4,4,5,6,6,19};
 		RemoveDuplicate(arr);
+		PairSum(arr);
 	}
 
 }
